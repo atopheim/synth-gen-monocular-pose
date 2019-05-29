@@ -4,7 +4,7 @@
 
 1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), DOPE (https://github.com/NVlabs/Deep_Object_Pose) and PVNet (https://github.com/zju3dv/pvnet).
 
-2) If you attempt to recreate this project the first thing you need to keep track of is your CUDA version and it's compatability with the different runtime frameworks (PyTorch and TensorFlow). Also some of these frameworks are at the time of writing not compatible with the new hardware architecture of the new touring RTX nvidia graphics series.
+2) If you attempt to recreate this project the first thing you need to keep track of is your CUDA version and it's compatability with the different runtime frameworks (PyTorch and TensorFlow). At the time of writing PyTorch is also compatible with the hardware architecture of the new touring RTX nvidia graphics series.
 
 3) Follow the respective installation instructions for setting up each environment with it's dependencies.
 
@@ -12,7 +12,7 @@
 source /opt/ros/kinetic/setup.bash
 export ROS_MASTER_URI=http://172.x.x.x
 3) Additional info for pvnet:
-In order to not run into too many package conflicts it is recommended to try and install as much as possible with anaconda and then install the remainders with pip3.
+In order to not run into too many package conflicts it is recommended to try and install as much as possible with anaconda and then install the remainding with pip3.
 
 
 
