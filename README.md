@@ -1,12 +1,19 @@
 # Master thesis 2019 - Volvo / Chalmers / NTNU
 
-# Code used for the master project can be found here as well as in the Mask_RCNN branch.
+Code used for the master project can be found here as well as linked libraries. 
 
-1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), DOPE (https://github.com/NVlabs/Deep_Object_Pose) and PVNet (https://github.com/zju3dv/pvnet).
+# Results - Instance Segmentation
+Results under are shown if the confidence is greater than 0.40. This threshold should be set closer to 0.85 for more robust inference, but for illustratory purposes it has been lowered.
 
-Previous results             |  Current status
+Previous results            |  Obtained results
 :-------------------------:|:-------------------------:
 ![](previous.gif)  |  ![](current.gif)
+
+# Results - Pose estimation
+<img src="./decent.svg">
+
+# Installation
+1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), DOPE (https://github.com/NVlabs/Deep_Object_Pose) and PVNet (https://github.com/zju3dv/pvnet).
 
 2) If you attempt to recreate this project the first thing you need to keep track of is your CUDA version and it's compatability with the different runtime frameworks (PyTorch and TensorFlow). At the time of writing PyTorch is also compatible with the hardware architecture of the new touring RTX nvidia graphics series.
 
