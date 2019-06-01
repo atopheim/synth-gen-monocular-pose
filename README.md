@@ -17,9 +17,8 @@ Evaluation on different synthetic data yielded some decent results. Pose predict
 
 Evaluation on real images confirms that it is beneficial to either add real images in the training data, utilize depth information or simulate the real world even better.
 
-<p align="center">
 Obtained results
-:-------------------------:
+<p align="center">
 ![](real.gif)  
 <\p>
   
