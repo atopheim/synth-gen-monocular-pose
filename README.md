@@ -4,6 +4,11 @@
 
 1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), DOPE (https://github.com/NVlabs/Deep_Object_Pose) and PVNet (https://github.com/zju3dv/pvnet).
 
+Previous status:
+![](previous.gif)
+Current status:
+![](current.gif)
+
 2) If you attempt to recreate this project the first thing you need to keep track of is your CUDA version and it's compatability with the different runtime frameworks (PyTorch and TensorFlow). At the time of writing PyTorch is also compatible with the hardware architecture of the new touring RTX nvidia graphics series.
 
 3) Follow the respective installation instructions for setting up each environment with it's dependencies.
