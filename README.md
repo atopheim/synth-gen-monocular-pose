@@ -10,7 +10,7 @@ Previous results            |  Obtained results
 ![](previous.gif)  |  ![](current.gif)
 
 # Results - Pose estimation
-<img src="decent.svg">
+<img src="decent.png">
 
 # Installation
 1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), DOPE (https://github.com/NVlabs/Deep_Object_Pose) and PVNet (https://github.com/zju3dv/pvnet).
