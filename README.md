@@ -16,11 +16,12 @@ Evaluation on different synthetic data yielded some decent results. Pose predict
 </p>
 
 Evaluation on real images confirms that it is beneficial to either add real images in the training data, utilize depth information or simulate the real world even better.
-  
- Obtained results
+
+<p align="center">
+Obtained results
 :-------------------------:
 ![](real.gif)  
-
+<\p>
   
 # Installation
 1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), PVNet (https://github.com/zju3dv/pvnet) and DOPE (https://github.com/NVlabs/Deep_Object_Pose).
