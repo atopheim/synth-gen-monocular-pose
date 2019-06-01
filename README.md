@@ -10,9 +10,16 @@ Previous results            |  Obtained results
 ![](previous.gif)  |  ![](current.gif)
 
 # Results - Pose estimation
+Evaluation on different synthetic data yielded some decent results. Pose predictions are illustrated with a blue 3D bounding box, whereas ground truth pose is illustrated as the green counterpart.
 <p align="center">
 <img src="decent.png">
 </p>
+
+Evaluation on real images confirms that it is beneficial to either add real images in the training data, utilize depth information or simulate the real world even better.
+  
+ Obtained results
+:-------------------------:
+![](real.gif)  
 
 # Installation
 1) The external open source projects used are Mask-RCNN (https://github.com/matterport/Mask_RCNN), DOPE (https://github.com/NVlabs/Deep_Object_Pose) and PVNet (https://github.com/zju3dv/pvnet).
