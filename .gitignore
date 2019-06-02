@@ -1,0 +1,46 @@
+# Folders
+mask/samples/div
+mask/results/*
+
+pose/data
+pose/div/*
+pose/temp/*
+
+
+# Weights
+*.h5
+*.pth
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+cmake-build-debug/
+.idea/
+__pycache__/
+*.egg-info/
+build/
+dist/
+.ipynb_checkpoints/
+*.py[cod]
+*.so
+*.orig
+*.o
+pose/figure/result
+pose/figure/pose_cnn_cached
+pose/figure/cached
+pose/figure/video_new
+pose/lib/mesh_renderer/.*
+pose/lib/mesh_renderer/cmake-*
+pose/lib/mesh_renderer/build
+pose/!lib/mesh_renderer/build/*.so
+pose/lib/utils/extend_utils/src/CMakeFiles
+pose/lib/utils/extend_utils/src/CMakeCache.txt
+
+
+# Packages
+*.7z
+*.zip
+*.rar
+*.tar
