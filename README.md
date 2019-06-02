@@ -7,19 +7,19 @@ Results under are shown if the confidence is greater than ```0.40```. This thres
 
 Previous results            |  Obtained results
 :-------------------------:|:-------------------------:
-![](previous.gif)  |  ![](current.gif)
+![](assets/previous.gif)  |  ![](assets/current.gif)
 
 ## Results - Pose estimation
 Evaluation on different synthetic data yielded some decent results. Pose predictions are illustrated with a blue 3D bounding box, whereas ground truth pose is illustrated as the green counterpart.
 <p align="center">
-<img src="decent.png">
+<img src="assets/decent.png">
 </p>
 
 Evaluation on real images confirms that it is beneficial to either add real images in the training data, utilize depth information or simulate the real world even better.
 
 Obtained results
 :-------------------------:
-![](real.gif)  
+![](assets/real.gif)  
 
   
 ## Installation
