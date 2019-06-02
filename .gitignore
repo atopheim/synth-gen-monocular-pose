@@ -37,7 +37,7 @@ pose/lib/mesh_renderer/build
 pose/!lib/mesh_renderer/build/*.so
 pose/lib/utils/extend_utils/src/CMakeFiles
 pose/lib/utils/extend_utils/src/CMakeCache.txt
-
+pose/lib/utils/extend_utils/include/*
 
 # Packages
 *.7z
