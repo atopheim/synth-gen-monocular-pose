@@ -1,4 +1,4 @@
-# Master thesis 2019 - Volvo / Chalmers / NTNU
+# Master thesis 2019 - Chalmers / NTNU / Volvo
 
 Code used for the master project can be found here as well as linked libraries. 
 
@@ -21,7 +21,6 @@ Obtained results
 :-------------------------:
 ![](assets/real.gif)  
 
-  
 ## Installation
 1) The external open source projects used are:
 * [Mask-RCNN](https://github.com/matterport/Mask_RCNN) - Instance segmentation,
@@ -32,9 +31,10 @@ Obtained results
 
 3) Follow the respective installation instructions for setting up each environment with it's dependencies, installing as much as possible with conda before resolving the remaining with pip.
 
-4) One would be encouraged to use docker for the easiest installation with respect to DOPE. Here one needs to rememeber to append export ROS_MASTER_URI=http://localhost:11311 to the ~/.bashrc of the remote (outside the docker environment) and append 
+4) One would be encouraged to use docker for the easiest installation of the DOPE environment. Here one needs to rememeber to append export ROS_MASTER_URI=http://localhost:11311 to the ~/.bashrc of the remote (outside the docker environment) and append the following to the ~/.bashrc of the docker instance.
 source /opt/ros/kinetic/setup.bash
 export ROS_MASTER_URI=http://172.x.x.x
+
 
 ## Authors
 
