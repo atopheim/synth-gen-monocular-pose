@@ -10,11 +10,10 @@ import matplotlib
 import matplotlib.pyplot as plt
 import cv2
 import argparse
-
+from PIL import Image
 # Root directory of the project
 ROOT_DIR = os.path.abspath("../")
-MODEL_IN_DIR = os.path.join("/media/volvomlp2/b70eabd5-2b0b-4fbe-8230-7e839a24249a/MRCNN_models/")
-# Import Mask RCNN
+MODEL_IN_DIR = os.path.join("../weights")
 sys.path.append(ROOT_DIR)  # To find local version of the library
 
 from mrcnn import utils
@@ -30,17 +29,16 @@ import datetime
 parser = argparse.ArgumentParser()
 parser.add_argument('--model',dest='model',default='mask_rcnn_coco.h5')
 parser.add_argument('--input',dest='input',default='cam')
-parser.add_argument('--media',dest='media',default='Webcam/2019-05-30-103500.webm')
-parser.add_argument('--image',dest='image')
+parser.add_argument('--media',dest='media',default='../lights_cluttered.webm')
 parser.add_argument('--debug',dest='debug',action='store_true', default = False)
 args = parser.parse_args()
 
-VID_PATH = os.path.join('/home/volvomlp2/Videos/Webcam',args.media)
+VID_PATH = os.path.join(ROOT_DIR,"media",args.media)
 MODEL_DIR = os.path.join(ROOT_DIR, "logs")
-
+IMAGE_DIR = os.path.join(ROOT_DIR, "media",args.media)
 print("MODEL USED :",args.model)
 print("input: ",args.input)
-print("media: ",VID_PATH)
+print("media: ",args.media)
 # Directory to save logs and trained model
 
 # Local path to trained weights file
@@ -50,15 +48,13 @@ if not os.path.exists(COCO_MODEL_PATH):
     utils.download_trained_weights(COCO_MODEL_PATH)
 
 # Directory of images to run detection on
-IMAGE_DIR = os.path.join(ROOT_DIR, "images")
-print( IMAGE_DIR)
 
 class InferenceConfig(coco.CocoConfig):
     # Set batch size to 1 since we'll be running inference on
     # one image at a time. Batch size = GPU_COUNT * IMAGES_PER_GPU
     GPU_COUNT = 1
     IMAGES_PER_GPU = 1
-    DETECTION_MIN_CONFIDENCE = 0.40
+    DETECTION_MIN_CONFIDENCE = 0.85
 
     if args.model == "jason_0040.h5":
         NUM_CLASSES = 1 + 5
@@ -178,9 +174,9 @@ elif args.input=='video':
                                   cv2.VideoWriter_fourcc(*'MJPG'),
                                   fps, (width, height))
     
-elif args.image != False:
-    frame = skimage.io.imread(args.image)
-    print("image ;)",frame.shape)
+elif args.input == 'image':
+    frame = skimage.io.imread(IMAGE_DIR)
+    #print("image ;)",frame.shape)
     results = model.detect([frame], verbose=1) #1/0
     r = results[0]
     frame = display_instances(
@@ -188,7 +184,6 @@ elif args.image != False:
     file_name = "detection_{:%Y%m%dT%H%M%S}.png".format(datetime.datetime.now())
     skimage.io.imsave(file_name, frame)
     loop = False
-
 else:
     print("what-----------------------------")
 count = 0
@@ -214,8 +209,9 @@ while loop:
         count += 1
     else:
         break
-vwriter.release()
 
-capture.release()
-cv2.destroyAllWindows()
+if not args.input == 'image':
+    vwriter.release()
+    capture.release()
+    cv2.destroyAllWindows()
 
