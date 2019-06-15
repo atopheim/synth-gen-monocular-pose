@@ -19,7 +19,7 @@ Evaluation on real images confirms that it is beneficial to either add real imag
 
 Obtained results
 :-------------------------:
-![](assets/real.gif)  
+![](assets/spinmove.gif)  
 
 ## Installation
 1) The external open source projects used are:
