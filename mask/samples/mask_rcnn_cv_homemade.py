@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import keras
 import os
 import sys
 import random
@@ -134,7 +134,7 @@ if args.model == "mask_rcnn_coco.h5":
                 'teddy bear', 'hair drier', 'toothbrush']
     #for idx, element in enumerate(class_names):
     #    print(idx, element)
-elif args.model == "jason_0040.h5":
+elif os.path.basename(args.model) == "jason_0040.h5":
     class_names = ['BG', 'bypass-v', 'intake', 'ladderframe', 'pipe1', 'pipe2']
 else:
     class_names = ['BG', 'bypass-r', 'bypass-v', 'intake', 'ladderframe', 'pipe1', 'pipe2']
@@ -145,6 +145,8 @@ model = modellib.MaskRCNN(mode="inference", model_dir=MODEL_DIR, config=config)
 # Load weights trained on MS-COCO
 model.load_weights(COCO_MODEL_PATH, by_name=True)
 
+m = load_weights('../weights/Mrcnn_no_aug_0120.h5')
+m.summary()
 # for video and cap
 loop = True
 
@@ -210,7 +212,7 @@ while loop:
     else:
         break
 
-if not args.input == 'image':
+if args.input != 'image':
     vwriter.release()
     capture.release()
     cv2.destroyAllWindows()
