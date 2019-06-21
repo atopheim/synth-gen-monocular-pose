@@ -1,6 +1,6 @@
 # Master thesis 2019 - Chalmers / NTNU / Volvo
 
-Code used for the master project can be found here as well as linked libraries. 
+Code used for the master project can be found here as well as linked libraries.
 
 ## Results - Instance Segmentation
 Results under are shown if the confidence is greater than ```0.40```. This threshold should be set closer to ```0.85``` for more robust inference, but for illustratory purposes it has been lowered.
@@ -24,16 +24,14 @@ Obtained results
 ## Installation
 1) The external open source projects used are:
 * [Mask-RCNN](https://github.com/matterport/Mask_RCNN) - Instance segmentation,
-* [PVNet](https://github.com/zju3dv/pvnet) - Pose estimation, and
-* [DOPE](https://github.com/NVlabs/Deep_Object_Pose) - Pose estimation.
+* [PVNet](https://github.com/zju3dv/pvnet) - Pose estimation.
+* [PVNet-rendering](https://github.com/zju3dv/pvnet-rendering) - Dataset generation
 
 2) If you attempt to recreate this project the first thing you need to keep track of is your CUDA version and it's compatability with the different runtime frameworks (PyTorch and TensorFlow). At the time of writing PyTorch is also compatible with the hardware architecture of the new touring RTX nvidia graphics series.
 
 3) Follow the respective installation instructions for setting up each environment with it's dependencies, installing as much as possible with conda before resolving the remaining with pip.
 
-4) One would be encouraged to use docker for the easiest installation of the DOPE environment. Here one needs to rememeber to append export ROS_MASTER_URI=http://localhost:11311 to the ~/.bashrc of the remote (outside the docker environment) and append the following to the ~/.bashrc of the docker instance.
-source /opt/ros/kinetic/setup.bash
-export ROS_MASTER_URI=http://172.x.x.x
+4) Weights and part specific files are not supplied here due to size restriction on Github as well as IPR.
 
 
 ## Authors
