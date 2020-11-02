@@ -1,5 +1,5 @@
 # Master thesis 2019 - Chalmers / NTNU / Volvo
-
+[PDF](https://odr.chalmers.se/bitstream/20.500.12380/300527/1/Lecerof_Opheim_2019.pdf) - Master thesis
 Code used for the master project can be found here as well as linked libraries.
 
 ## Results - Instance Segmentation
